@@ -1,0 +1,64 @@
+@font-face {
+    font-family: BebasNeue;
+    src: url(fonts/BebasNeue-Regular.ttf);
+}
+
+body{
+    margin: 0;
+    padding: 0;
+}
+
+.navbar{
+    background-color: #1D2021;
+    height: 110px;
+    color: #FFFFFF;
+    font-family: BebasNeue;
+    text-transform: capitalize;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar a{
+    text-decoration: none;
+}
+
+.navbar a:visited{
+    color: white;
+}
+
+.left-nav{
+    margin-left: 75px;
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+.title{
+    font-size: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav-logo img{
+    height: 71px;
+}
+
+.right-nav{
+    font-size: 36px;
+    margin: 0;
+    padding-left: 0;
+    margin-right: 50px;
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    gap: 50px;
+}
+
+hr{
+    margin: 0 auto;
+    width: 95%;
+    border: 2px solid #8ECCB1;
+}
+
