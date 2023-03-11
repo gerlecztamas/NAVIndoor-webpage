@@ -8,15 +8,43 @@ body{
     padding: 0;
 }
 
+::-webkit-scrollbar {
+    width: 10px;
+    background-color: #1D2021;
+}
+
+::-webkit-scrollbar-track
+{
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	background-color: #1D2021;
+}
+
+::-webkit-scrollbar-thumb
+{
+    /*background-color: rgb(93,176,149);*/
+    /*background-color: #8ECCB1;*/
+
+    /* Egyik színből másikba átmenős scrollbar*/
+    background-image: -webkit-gradient(linear,
+									   left bottom,
+									   left top,
+                                       color-stop(0.86, rgb(142,204,177)),
+									   color-stop(0.54, rgb(93,176,149))
+									   );
+}
+
 .navbar{
     background-color: #1D2021;
     height: 110px;
     color: #FFFFFF;
     font-family: BebasNeue;
-    text-transform: capitalize;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    /* Ottmarad a menu fent */
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
 }
 
 .navbar a{
@@ -62,3 +90,19 @@ hr{
     border: 2px solid #8ECCB1;
 }
 
+/* Egyelőre egy div háttérképe az adott terv, a magasságot arányosan kiszámolja mindig, hogy ne legyen nyomott a kép */
+
+.home{
+    background-image: url("images/uni.png");
+    width: 100%;
+    background-size: 100% 100%;
+    height: calc(100vw * 0.7142857143);
+}
+
+.slogan{
+    color: #F6F6F2;
+    font-family: BebasNeue;
+    font-size: 250px;
+    margin-top: 240px;
+    margin-left: 120px;
+}
