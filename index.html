@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="res/style.css">
+    <script src="https://kit.fontawesome.com/89fca6ebf6.js" crossorigin="anonymous"></script>
     <title>NAVIndoor</title>
 </head>
 <body>
@@ -14,20 +15,81 @@
                 <a href="">NAVIndoor</a>
             </div>
             <div class="nav-logo">
-                <img src="res/images/nav_logo.png" alt="">
+                <a href=""><img src="res/images/nav_logo.png" alt=""></a>
             </div>
         </div>
         <ul class="right-nav">
             <li><a href="">Home</a></li>
-            <li><a href="">About us</a></li>
-            <li><a href="">Services</a></li>
-            <li><a href="">Contact</a></li>
+            <li><a href="#about">About us</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#footer">Contact</a></li>
         </ul>
     </nav>
-    <div class="home">
+    <div class="home" id="home">
         <hr>
         <div class="slogan">To always find<br>your way</div>
     </div>
+    <div class="about" id="about">
+        <div class="about-container">
+            <div class="about-list">
+                <div class="about-list-item" id="about-list-item-first">
+                    <i class="fa-regular fa-compass fa-4x"></i>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis, eaque quisquam ></p>
+                </div>
+                <div class="about-list-item">
+                    <i class="fa-brands fa-bluetooth-b fa-4x"></i>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis, eaque quisquam ></p>
+                </div>
+                <div class="about-list-item">
+                    <i class="fa-solid fa-mobile-screen-button fa-4x"></i>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis, eaque quisquam ></p>
+                </div>
+            </div>
+            <div class="about-slogan">Indoor<br>navigation<br>at its<br>modernest</div>
+        </div>
+    </div>
+    <div class="services" id="services">
+
+    </div>
+    <footer id="footer">
+        <div class="footer-container">
+            <div class="footer-logo">
+                <div class="placeholder"></div>
+            </div>
+            <div class="footer-links">
+                <ul class="footer-about">
+                    <li class="footer-link-title">About</li>
+                    <li>Terminology</li>
+                    <li>Team</li>
+                </ul>
+                <ul class="footer-services">
+                    <li class="footer-link-title">Services</li>
+                    <li>Free plan</li>
+                    <li>Premium plan</li>
+                    <li>Portfolio</li>
+                </ul>
+                <ul class="footer-companies">
+                    <li class="footer-link-title">For companies</li>
+                    <li>Advertisement</li>
+                    <li>Mapping</li>
+                </ul>
+            </div>
+            <div class="sign-up">
+                <p>Sign up for updates!</p>
+                <div class="sign-up-form">
+                    <input type="text" placeholder="your email address...">
+                    <button type="submit">submit</button>
+                </div>
+                <div class="social">
+                    <i class="fa-regular fa-envelope fa-2x"></i>
+                    <i class="fa-solid fa-phone fa-2x"></i>
+                    <i class="fa-brands fa-facebook fa-2x"></i>
+                    <i class="fa-brands fa-instagram fa-2x"></i>
+                    <i class="fa-brands fa-linkedin fa-2x"></i>
+                </div>
+            </div>
+        </div>
+    </footer>
     <script src="src/script.js"></script>
 </body>
 </html>
