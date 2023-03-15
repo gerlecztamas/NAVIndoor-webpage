@@ -50,6 +50,7 @@ body{
     position: -webkit-sticky;
     position: sticky;
     top: 0;
+    z-index: 1;
 }
 
 .navbar a{
@@ -123,6 +124,13 @@ hr{
     margin-left: 120px;
     margin-top: auto;
     margin-bottom: auto;
+}
+
+.top{
+    position: absolute;
+    top: calc(100vh - 148px);
+    height: 400px;
+    width: 80vw;
 }
 
 .about{
