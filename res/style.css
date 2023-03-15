@@ -62,7 +62,7 @@ body{
 }
 
 .navbar li:hover{
-    transform: scale(1.15);
+    transform: scale(1.1);
     opacity: 0.8;
 }
 
@@ -172,4 +172,112 @@ hr{
     font-size: 85px;
     color: #1D2021;
     text-align: center;
+}
+
+.services{
+    background-color: #264a54;
+    height: calc(100vh - 110px);
+}
+
+footer{
+    height: 327px;
+    background-color: #1D2021;
+    display: flex;
+    color: #FFFFFF;
+    font-family: Anaheim;
+}
+
+.footer-container{
+    width: 90%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.placeholder{
+    height: 168px;
+    width: 149px;
+    border: 1px solid red;
+}
+
+.footer-links{
+    font-size: 20px;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    gap: 50px;
+}
+
+.footer-links ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.footer-links li{
+    margin-bottom: 10px;
+}
+
+.footer-links .footer-link-title{
+    font-size: 32px;
+    margin-bottom: 30px;
+}
+
+.sign-up p{
+    font-family: BebasNeue;
+    font-size: 36px;
+    margin: auto;
+    margin-top: 0;
+    margin-bottom: 15px;
+    width: fit-content;
+}
+/* komoly alakítások lehetnek még itt egyéb ilyen olyan szempontok maitt */
+.sign-up-form{
+    margin-bottom: 35px;
+    position: relative;
+    width: 350px;
+}
+
+.sign-up-form input{
+    box-sizing: border-box;
+    background-color: #2F6375;
+    font-size: 14px;
+    font-family: Anaheim;
+    color: rgba(246, 246, 242, 0.7);
+    width: 100%;
+    border: none;
+    padding: 12px 16px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+input:focus{
+    outline: none;
+}
+
+.sign-up-form button{
+    background-color: #264A54;
+    border: none;
+    margin-left: -25%;
+    border-radius: 8px;
+    padding: 12px 16px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    font-size: 14px;
+    font-family: Anaheim;
+    color: #F6F6F2;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 1;
+    cursor: pointer;
+}
+
+.sign-up-form button:hover{
+    opacity: 0.8;
+    transform: scale(1.1);
+}
+
+/* ezek nyilván lehetnek majd egyszerűen valami linkek, attól függ ki hogy szeretné, a lista elemei a footerben meg szintúgy */
+.social{
+    display: flex;
+    justify-content: space-between;
 }
