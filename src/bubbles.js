@@ -35,3 +35,50 @@ for(var i of bubbles){
     botDiv.lastChild.id = "bubble" + number;
     number++
 }
+
+var topTreshold = document.querySelector("nav").offsetHeight;
+var botTreshold = document.querySelector(".home").offsetHeight - document.querySelector("nav").offsetHeight;
+console.log(botTreshold);
+
+window.onscroll = function()
+{
+    let scrollTop = document.documentElement.scrollTop;
+
+    if(scrollTop >= topTreshold){
+        let topAmount = (scrollTop-topTreshold);
+        if(topAmount >= 100){
+            topAmount = 100;
+        }
+        //console.log(topAmount);
+        topDiv.style.transform = `translateX(${-100+topAmount}%)`;
+    }
+
+    if(scrollTop >= botTreshold){
+        let botAmount = (scrollTop-botTreshold);
+        if(botAmount >= 100){
+            botAmount = 100;
+        }
+        console.log(botAmount);
+        botDiv.style.transform = `translateX(${100-botAmount}%)`;
+    }
+};
+
+
+/*
+window.onscroll = function()
+{
+	var scrollTop = document.documentElement.scrollTop;
+	
+	if(scrollTop >= adTreshold)
+	{
+		advertising.style.position = "fixed";
+		advertising.style.left = 0;
+		advertising.style.top = 0;
+		advertising.style.width = "100%";
+		advertising.style.fontSize = "75%";
+		
+		//Érdemes mindent lejjebb tolni, hogy ne takarja ki a tartalom tetejét
+		document.getElementById('container').style.marginTop = adTreshold +"px";
+	}
+};
+*/
