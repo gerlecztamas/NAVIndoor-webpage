@@ -133,6 +133,14 @@ hr{
     width: 80vw;
 }
 
+.bottom{
+    position: absolute;
+    top: calc(200vh - 260px);
+    right: 0;
+    height: 400px;
+    width: 850px;
+}
+
 .about{
     background-color: #8ECCB1;
     height: calc(100vh - 110px);
