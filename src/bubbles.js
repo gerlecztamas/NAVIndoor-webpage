@@ -1,5 +1,6 @@
 let topDiv = document.querySelector(".top");
 let botDiv = document.querySelector(".bottom");
+let arrowDiv = document.querySelector(".arrow");
 const darkBlue = "#264A54";
 const midBlue = "#2F6375";
 const lightBlue = "#6FADC3";
@@ -51,6 +52,7 @@ window.onscroll = function()
         }
         //console.log(topAmount);
         topDiv.style.transform = `translateX(${-100+topAmount}%)`;
+        arrowDiv.style.opacity = "0";
     }
 
     if(scrollTop >= botTreshold){
