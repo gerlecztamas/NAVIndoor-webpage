@@ -39,6 +39,10 @@ body{
 									   );
 }
 
+.bar{
+    display: none;
+}
+
 .navbar{
     background-color: #1D2021;
     height: 110px;
@@ -254,12 +258,6 @@ hr{
     font-size: 32px;
 }
 
-/*
-.services div{
-    border: 1px solid blue;
-}
-*/
-
 .services-left, .services-right{
     display: flex;
     flex-direction: column;
@@ -427,4 +425,313 @@ input:focus{
 .social{
     display: flex;
     justify-content: space-between;
+}
+
+
+
+@media screen and (max-width: 1280px) {
+
+    /*Kész*/
+    .bar{
+        display: block;
+        position: absolute;
+        right: 0;
+        margin: auto;
+        margin-right: 40px;
+        align-self: center;
+    }
+
+    .navbar{
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content:center;
+    }
+    
+    .left-nav{
+        align-self: flex-start;
+        margin-left: 40px;
+        margin-top: 40px;
+        margin-bottom: 40px;
+        gap: 10px;
+    }
+    
+    .title{
+        font-size: 32px;
+    }
+    
+    .nav-logo img{
+        height: 47px;
+    }
+    
+    .right-nav{
+        font-size: 24px;
+        margin-right: 0;
+        margin-left: 40px;
+        margin-bottom: 40px;
+        flex-direction: column;
+        gap: 30px;
+        align-self: flex-start;
+        display: none;
+    }
+
+    .bar:hover{
+        cursor: pointer;
+        border-bottom: none;
+        transition: 0.5s;
+        transform: scale(1.1);
+        opacity: 0.8;
+    }
+
+    .right-nav.active{
+        display: block;
+    }
+
+
+
+    /*Kész*/
+    .slogan{
+        font-size: 105px;
+        margin: auto;
+        margin-top: 70%;
+        text-align: center;
+    }
+
+
+
+    .top{
+        display: none;
+    }
+    .bubbles{
+        display: none;
+    }
+
+
+
+    /*Kész*/
+    .about-container{
+        flex-direction: column;
+    }
+    
+    .about-list{
+        width: 100%;
+        gap: 40px;
+    }
+    
+    .about-list-item{
+        font-size: 20px;
+        padding: 15px 20px;
+    }
+    
+    .about-slogan{
+        font-size: 63px;
+        margin-top: 40px;
+    }
+
+
+
+    /*Kész*/
+    .services img{
+        display: none;
+    }
+
+    .services{
+        flex-direction: column;
+        justify-content: space-around;
+        box-sizing: border-box;
+        padding: 10% 0;
+    }
+    
+    .services h1{
+        font-size: 26px;
+    }
+    
+    .services p{
+        font-size: 18px;
+    }
+
+    .services-title{
+        width: 90vw;
+        margin: 0 auto;
+        position: static;
+        font-size: 48px;
+    }
+    
+    .services-left-text{
+        margin-bottom: 0;
+    }
+    
+    .services-right-text{
+        margin: 0 auto;
+    }
+    
+    .services-middle{
+        width: 70vw;
+        margin: 0 auto;
+    }
+    
+    .services-middle img{
+        display: block;
+        margin: auto;
+        margin-top: 0;
+    }
+    
+    .explore, .download{
+        width: 100%;
+        font-size: 30px;
+        padding: 8px 12px;
+    }
+    
+    
+
+    /*Kész*/
+    footer{
+        height: auto;
+    }
+
+    .footer-container{
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-logo img{
+        height: 120px;
+        margin: 60px auto;
+    }
+
+    .footer-links{
+        font-size: 24px;
+        flex-direction: column;
+        gap: 36px;
+        margin-bottom: 60px;
+    }
+    
+    .footer-links li{
+        margin-bottom: 10px;
+    }
+    
+    .footer-links .footer-link-title{
+        font-size: 36px;
+        margin-bottom: 20px;
+    }
+
+    .sign-up p{
+        font-size: 36px;
+    }
+
+    .sign-up-form{
+        margin: auto;
+        margin-bottom: 60px;
+        width: 375px;
+    }
+
+    .social{
+        margin: auto;
+        margin-bottom: 60px;
+        width: 80%;
+    }
+
+}
+
+@media screen and (max-width: 767px) {
+    /*Kész*/
+    .bar{
+        margin-right: 30px;
+    }
+    
+    .left-nav{
+        margin-left: 30px;
+        margin-top: 30px;
+        margin-bottom: 30px;
+        gap: 10px;
+    }
+    
+    .title{
+        font-size: 24px;
+    }
+    
+    .nav-logo img{
+        height: 35px;
+    }
+    
+    .right-nav{
+        font-size: 18px;
+        margin-left: 30px;
+        margin-bottom: 30px;
+        gap: 20px;
+    }
+
+
+
+    /*Kész*/
+    .slogan{
+        font-size: 80px;
+    }
+
+
+
+    /*Kész*/
+    .about-list{
+        gap: 20px;
+    }
+    
+    .about-list-item{
+        font-size: 12px;
+    }
+    
+    .about-slogan{
+        font-size: 42px;
+        margin-top: 30px;
+    }
+
+
+
+    /*Kész*/
+    .services h1{
+        font-size: 18px;
+    }
+    
+    .services p{
+        font-size: 14px;
+    }
+
+    .services-title{
+        font-size: 36px;
+    }
+    
+    .explore, .download{
+        font-size: 20px;
+        padding: 4px 8px;
+    }
+    
+    
+
+    /*Kész*/
+    .footer-logo img{
+        height: 80px;
+        margin: 40px auto;
+    }
+
+    .footer-links{
+        font-size: 15px;
+        gap: 25px;
+        margin-bottom: 30px;
+    }
+    
+    .footer-links .footer-link-title{
+        font-size: 24px;
+    }
+
+    .sign-up p{
+        font-size: 24px;
+    }
+
+    .sign-up-form{
+        margin-bottom: 40px;
+        width: 250px;
+    }
+
+    .social{
+        margin-bottom: 40px;
+    }
 }

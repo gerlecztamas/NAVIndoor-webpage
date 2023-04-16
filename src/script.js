@@ -7,3 +7,10 @@ document.querySelectorAll('a[href^="#"]').forEach(a => {
         });
     });
 });
+
+const bar = document.getElementsByClassName('bar')[0]
+const menu = document.getElementsByClassName('right-nav')[0]
+
+bar.addEventListener('click', () => {
+        menu.classList.toggle('active')
+})
