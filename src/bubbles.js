@@ -13,29 +13,77 @@ let bubbles = [
     [540, 200, 16, white], [600, 185, 11, midBlue], [650, 135, 29, midBlue], [700, 150, 11, white], [720, 170, 20, lightBlue],
     [760, 140, 18, aqua], [780, 160, 15, darkBlue], [830, 160, 8, white]
 ]
+if (window.matchMedia('screen and (max-width: 767px)').matches) {
+    let number = 0;
+    for(var i of bubbles){
+        let svg = `<svg height="107" width="283"><circle cx="${i[0]/3}" cy="${i[1]/3}" r="${i[2]/3}" fill="${i[3]}" /></svg>`;
+        topDiv.innerHTML += svg;
+        topDiv.lastChild.style.position = "absolute";
+        topDiv.lastChild.id = "bubble" + number;
+        number++;
+    }
+    let svg = '';
+    for(var i of bubbles){
+        if(number == 19){
+            svg = `<svg height="107" width="283"><circle cx="${(283-i[0]/3)}" cy="${i[1]/3}" r="${i[2]/3}" fill="${darkBlue}" /></svg>`;
+        }
+        else{
+            svg = `<svg height="107" width="283"><circle cx="${(283-i[0]/3)}" cy="${i[1]/3}" r="${i[2]/3}" fill="${i[3]}" /></svg>`;
+        }
+        botDiv.innerHTML += svg;
+        botDiv.lastChild.style.position = "absolute";
+        botDiv.lastChild.id = "bubble" + number;
+        number++;
+    }
+}
+else if (window.matchMedia('screen and (max-width: 1280px)').matches) {
+    let number = 0;
+    for(var i of bubbles){
+        let svg = `<svg height="160" width="425"><circle cx="${i[0]/2}" cy="${i[1]/2}" r="${i[2]/2}" fill="${i[3]}" /></svg>`;
+        topDiv.innerHTML += svg;
+        topDiv.lastChild.style.position = "absolute";
+        topDiv.lastChild.id = "bubble" + number;
+        number++;
+    }
+    let svg = '';
+    for(var i of bubbles){
+        if(number == 19){
+            svg = `<svg height="160" width="425"><circle cx="${(425-i[0]/2)}" cy="${i[1]/2}" r="${i[2]/2}" fill="${darkBlue}" /></svg>`;
+        }
+        else{
+            svg = `<svg height="160" width="425"><circle cx="${(425-i[0]/2)}" cy="${i[1]/2}" r="${i[2]/2}" fill="${i[3]}" /></svg>`;
+        }
+        botDiv.innerHTML += svg;
+        botDiv.lastChild.style.position = "absolute";
+        botDiv.lastChild.id = "bubble" + number;
+        number++;
+    }
+}
+else{
+    let number = 0;
+    for(var i of bubbles){
+        let svg = `<svg height="320" width="850"><circle cx="${i[0]}" cy="${i[1]}" r="${i[2]}" fill="${i[3]}" /></svg>`;
+        topDiv.innerHTML += svg;
+        topDiv.lastChild.style.position = "absolute";
+        topDiv.lastChild.id = "bubble" + number;
+        number++;
+    }
 
-let number = 0;
-for(var i of bubbles){
-    let svg = `<svg height="320" width="850"><circle cx="${i[0]}" cy="${i[1]}" r="${i[2]}" fill="${i[3]}" /></svg>`;
-    topDiv.innerHTML += svg;
-    topDiv.lastChild.style.position = "absolute";
-    topDiv.lastChild.id = "bubble" + number;
-    number++
+    let svg = '';
+    for(var i of bubbles){
+        if(number == 19){
+            svg = `<svg height="320" width="850"><circle cx="${(850-i[0])}" cy="${i[1]}" r="${i[2]}" fill="${darkBlue}" /></svg>`;
+        }
+        else{
+            svg = `<svg height="320" width="850"><circle cx="${(850-i[0])}" cy="${i[1]}" r="${i[2]}" fill="${i[3]}" /></svg>`;
+        }
+        botDiv.innerHTML += svg;
+        botDiv.lastChild.style.position = "absolute";
+        botDiv.lastChild.id = "bubble" + number;
+        number++;
+    }
 }
 
-let svg = '';
-for(var i of bubbles){
-    if(number == 19){
-        svg = `<svg height="320" width="850"><circle cx="${(850-i[0])}" cy="${i[1]}" r="${i[2]}" fill="${darkBlue}" /></svg>`;
-    }
-    else{
-        svg = `<svg height="320" width="850"><circle cx="${(850-i[0])}" cy="${i[1]}" r="${i[2]}" fill="${i[3]}" /></svg>`;
-    }
-    botDiv.innerHTML += svg;
-    botDiv.lastChild.style.position = "absolute";
-    botDiv.lastChild.id = "bubble" + number;
-    number++
-}
 
 var topTreshold = document.querySelector("nav").offsetHeight;
 var botTreshold = document.querySelector(".home").offsetHeight - document.querySelector("nav").offsetHeight;
@@ -84,3 +132,4 @@ window.onscroll = function()
 	}
 };
 */
+
